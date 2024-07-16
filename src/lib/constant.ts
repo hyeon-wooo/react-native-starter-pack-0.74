@@ -1,6 +1,10 @@
 import {Platform} from 'react-native';
+import {getUniqueIdSync, getVersion} from 'react-native-device-info';
 
-export const API_URL = '';
+export const API_URL = 'http://127.0.0.1:3000';
+
+export const DEVICE_ID = getUniqueIdSync();
+export const CURRENT_VERSION = getVersion();
 
 export const IS_IOS = Platform.OS === 'ios';
 export const IS_ANDROID = Platform.OS === 'android';
