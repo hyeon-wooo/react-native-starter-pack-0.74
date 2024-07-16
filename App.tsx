@@ -5,30 +5,24 @@
  * @format
  */
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import {RecoilRoot} from 'recoil';
 import AbsoluteLoadingView from '~/components/AbsoluteLoadingView';
+import MainScreen from '~/screens/Main';
+import SplashScreen from '~/screens/Splash';
+import { TScreenParams } from '~/types/navigation.type';
+
+const Stack = createNativeStackNavigator<TScreenParams>();
 
 const AppInner = () => {
-  return <View></View>;
+  return <NavigationContainer>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="Main" component={MainScreen} />
+    </Stack.Navigator>
+  </NavigationContainer>
 };
 
 const App = () => {
