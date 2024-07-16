@@ -5,7 +5,7 @@ import {StyleSheet, View} from 'react-native';
 import {useSetRecoilState} from 'recoil';
 import {STORAGE_KEY} from '~/lib/constant';
 import {atom__accessToken} from '~/recoil/atom';
-import {TScreenParams} from '~/types/navigation.type';
+import {TScreenParams} from '~/lib/type/navigation.type';
 
 const SplashScreen = ({
   navigation,

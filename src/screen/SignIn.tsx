@@ -1,14 +1,14 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {TScreenParams} from '~/types/navigation.type';
+import {TScreenParams} from '~/lib/type/navigation.type';
 
-const MainScreen = ({
+const SignInScreen = ({
   navigation,
-}: NativeStackScreenProps<TScreenParams, 'Main'>) => {
+}: NativeStackScreenProps<TScreenParams, 'SignIn'>) => {
   return <View></View>;
 };
 
 const s = StyleSheet.create({});
 
-export default MainScreen;
+export default SignInScreen;
